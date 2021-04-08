@@ -6,8 +6,8 @@ namespace Cv9
 {
     class Calculator
     {
-        public String Display { get; set; }
-        public String Memory { get; set; }
+        public string Display { get; set; }
+        public string Memory { get; set; }
         private enum Stav
         {
             PrvniCislo,
@@ -22,9 +22,9 @@ namespace Cv9
         public double Vys { get; private set; }
 
         private string op;
-        private string num;
+        private string num = "";
 
-        public void Button(String btn)
+        public void Button(string btn)
         {
             if (Convert.ToChar(btn[0]) <= Convert.ToChar("9") && Convert.ToChar(btn[0]) >= Convert.ToChar("0"))
             {
@@ -62,7 +62,7 @@ namespace Cv9
                     break;
 
                 case "=":
-                    if (_stav != Stav.PrvniCislo)
+                    if (_stav != Stav.PrvniCislo || Vys == Convert.ToDouble(Display))
                     {
                         _stav = Stav.Vysledek;
                     }
@@ -110,6 +110,7 @@ namespace Cv9
                     num = "";
                     A = 0;
                     B = 0;
+                    Vys = 0;
                     Display = num;
                     _stav = Stav.PrvniCislo;
                     break;
