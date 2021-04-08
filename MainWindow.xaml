@@ -57,6 +57,6 @@
             <Button Content="MS" Grid.Column="4" Click="Button_Click"/>
         </Grid>
         <Grid/>
-        <TextBlock x:Name="display" Text="TextBlock" TextWrapping="Wrap" Grid.ColumnSpan="4" Margin="0,30,0,0" TextAlignment="Right" FontSize="36"/>
+        <TextBlock x:Name="display" TextWrapping="Wrap" Grid.ColumnSpan="4" Margin="0,30,0,0" TextAlignment="Right" FontSize="36"/>
     </Grid>
 </Window>

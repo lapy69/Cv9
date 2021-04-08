@@ -26,7 +26,8 @@ namespace Cv9
 
         public void Button(string btn)
         {
-            if (Convert.ToChar(btn[0]) <= Convert.ToChar("9") && Convert.ToChar(btn[0]) >= Convert.ToChar("0"))
+            if (btn[0] <= '9' && btn[0] >= '0')
+            //if (Convert.ToChar(btn[0]) <= Convert.ToChar("9") && Convert.ToChar(btn[0]) >= Convert.ToChar("0"))
             {
                 num += btn;
             }
@@ -139,16 +140,17 @@ namespace Cv9
                         num = "";
                     }
 
-                    Display = Convert.ToString(A) + op;
-                    
                     if (op == "x^2")
                     {
                         _stav = Stav.Vysledek;
-                        goto mocnina;
+                        //goto mocnina;
+                        Button("=");
+                        return;
                     }
 
                     else
                     {
+                        Display = Convert.ToString(A) + op;
                         _stav = Stav.DruheCislo;
                     }
 
@@ -156,7 +158,7 @@ namespace Cv9
 
                 case Stav.Vysledek:
                 
-                mocnina:
+                    //mocnina:
                     if (num.Equals("") == false)
                     {
                         B = Convert.ToDouble(num);
