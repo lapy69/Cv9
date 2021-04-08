@@ -25,13 +25,11 @@ namespace Cv9
         {
             InitializeComponent();
             display.Text = calculator.Display;
-            //memory.Content = calculator.Memory;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             calculator.Button ((sender as Button).Content.ToString());
             display.Text = calculator.Display;
-            //memory.Content = calculator.Memory;
         }
     }
 }
