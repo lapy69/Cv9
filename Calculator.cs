@@ -178,12 +178,7 @@ namespace Cv9
                 case Stav.Vysledek:
 
                     mocnina:
-                    if (num.Equals(""))
-                    {
-
-                    }
-
-                    else
+                    if (num.Equals("")==false)
                     {
                         B = Convert.ToDouble(num);
                         num = "";
